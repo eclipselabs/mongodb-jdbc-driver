@@ -53,6 +53,8 @@ import com.mongodb.client.MongoCursor;
 
 public class MongodbResultSet implements ResultSet {
 
+	public static final int RAW_DOCUMENT_INDEX = -100;
+	
 	private Statement stmnt;
 	private FindIterable<Document> findIterable;
 	private MongoCursor<Document> findIterator;
@@ -120,6 +122,9 @@ public class MongodbResultSet implements ResultSet {
 
 	@Override
 	public String getString(int columnIndex) throws SQLException {
+		if(columnIndex == RAW_DOCUMENT_INDEX){
+			return this.currentDoc.toJson();
+		}
 		return ((Entry<String, Object>)this.currentDoc.entrySet().toArray()[columnIndex-1]).getValue().toString();
 	}
 
