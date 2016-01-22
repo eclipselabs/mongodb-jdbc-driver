@@ -23,7 +23,7 @@
 	
 	<url>http://www.dirigible.io</url>
 	<scm>
-		<url>https://github.com/dirigible-io/mongo-jdbc</url>
+		<url>https://github.com/eclipselabs/mongodb-jdbc-driver</url>
 	</scm>
 	
 	<dependencies>
@@ -44,4 +44,5 @@
 		</dependency>
 	</dependencies>
 	
+	<name>MongoDB - JDBC Driver</name>
 </project>
