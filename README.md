@@ -30,5 +30,9 @@ Example:
 
 #### Get the raw Document from ResultSet iteration as JSON
 
-String doc = rs.getObject(-100);
+	String doc = rs.getObject(-100);
 
+#### Specify a collection to query
+
+	stmt.executeQuery(‘{find:"testCollection"}’);
+	
