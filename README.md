@@ -25,3 +25,10 @@ Example:
 			sqlEx.printStackTrace();
 		}
 	}
+
+### Tips, tricks, fancy features
+
+#### Get the raw Document from ResultSet iteration as JSON
+
+String doc = rs.getObject(-100);
+
